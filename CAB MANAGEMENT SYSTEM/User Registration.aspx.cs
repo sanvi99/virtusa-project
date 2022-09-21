@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -10,8 +11,9 @@ namespace CAB_MANAGEMENT_SYSTEM
 {
     public partial class Register : System.Web.UI.Page
     {
-        string constring = System.Configuration.ConfigurationManager.AppSettings["constring"];
-        SqlConnection con;
+
+        string constring = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
+       
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -19,23 +21,22 @@ namespace CAB_MANAGEMENT_SYSTEM
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                con = new SqlConnection(constring);
-                con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Users values('" + txtUname.Text + "','" + txtPno.Text + "','" + txtEmail.Text + "','" + txtPwd.Text + "')", con);
-                cmd.ExecuteNonQuery();
-                con.Close();
-                Response.Write("<script>('Register Successfully')</script>");
-                Response.Redirect("User Login.aspx");
-            }
-            catch (Exception ex)
-            {
-                Response.Write("<script>('Register Failed. User Name you choosed is already exist. please try with another username.')</script>");
-            }
 
+
+            SqlConnection con = new SqlConnection(constring);
+
+            SqlCommand cmd = new SqlCommand(@"INSERT INTO [dbo].[register]
+           ([username]
+           ,[phone]
+           ,[email]
+           ,[password])
+     VALUES
+            ('" + txtUname.Text + "','" + txtPno.Text + "','" + txtEmail.Text + "','" + txtPwd.Text + "')", con);
+            con.Open();
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Response.Write("<script>('Registered Successfully')</script>");
+            Response.Redirect("User Login.aspx");
         }
-
-       
     }
 }

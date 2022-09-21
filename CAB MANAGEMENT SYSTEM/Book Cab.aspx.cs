@@ -8,13 +8,14 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
 
 namespace CAB_MANAGEMENT_SYSTEM
 {
     public partial class Book_Cab : System.Web.UI.Page
     {
 
-        string constring = System.Configuration.ConfigurationManager.AppSettings["constring"];
+        string constring = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         SqlConnection con;
         string sourcepalce;
         string dist;

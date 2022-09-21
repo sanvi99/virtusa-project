@@ -53,9 +53,6 @@
     </div>
     <br />
     <br />
-    <div class="row">
-        <h4>Registered Details</h4>
-        <asp:GridView Class="table table-striped table-bordered"
-            Id="GridView1" runat="server"></asp:GridView>
-    </div>
+   
+    
 </asp:Content>

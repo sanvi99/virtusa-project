@@ -18,33 +18,28 @@ namespace CAB_MANAGEMENT_SYSTEM
        
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         //user login
         protected void Button1_Click1(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(constring);
-            SqlCommand cmd = new SqlCommand("select * from userregitration where username=@username and word=@word", con);
-            cmd.Parameters.AddWithValue("@username", txtUid.Text);
-            cmd.Parameters.AddWithValue("word", txtPwd.Text);
-            SqlDataAdapter sda = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            string check = "select count(*) from [dbo].[register] where username='" + txtUid.Text + "' and password='" + txtPwd.Text + "'";
+            SqlCommand cmd = new SqlCommand(check, con);
             con.Open();
-            int i = cmd.ExecuteNonQuery();
+            int temp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
             con.Close();
-
-            if (dt.Rows.Count > 0)
+            if (temp == 1)
             {
-                Response.Redirect("Driver Details.aspx");
+                Response.Redirect("WebForm1.aspx");
             }
             else
             {
-                Label3.Text = "Your username and word is incorrect";
+                Label3.Text = "Your username and password is incorrect";
                 Label3.ForeColor = System.Drawing.Color.Red;
-
             }
+            con.Close();
 
         }
 

@@ -3,9 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
-        <h1 img="/img/6.jpg">
+        <h1>
             we are the fastest...
         </h1>
+
     
     
 </asp:Content>
