@@ -1,45 +1,96 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Location Search.aspx.cs" Inherits="CAB_MANAGEMENT_SYSTEM.Location_Search" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-    .auto-style1 {
-        width: 879px;
-    }
-</style>
-</asp:Content>
+        .auto-style3 {
+            width: 643px;
+            height: 227px;
+        }
+        .auto-style4 {
+            width: 188px;
+        }
+        .auto-style5 {
+            width: 188px;
+            height: 53px;
+        }
+        .auto-style6 {
+            height: 53px;
+        }
+    </style>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <table runat="server" border="0" cellpadding="0" cellspacing="3" class="auto-style1">
-        <tr>
-            <td align="right">
+     <table align="center" class="auto-style3" >
+             <tr>
+                <td colspan="2">
+                    <h1 align="center">  Location Search</h1> 
                 </td>
-            <td style="font-weight: 700">Source:&nbsp;
-                <input id="txtSource" runat="server" style="width: 200px" type="text" value="" /> &nbsp;
-                <br />
-                <br />
-                Destination:&nbsp;
-                <input id="txtDestination" runat="server" style="width: 200px" type="text" value="" />
-                <br />
-                <br />
-                <input onclick="GetRoute()" type="button" value="Get Route" />
-                <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="search Cabs" />
-                <asp:LinkButton ID="lnklogout" runat="server" CssClass="auto-style3" OnClick="lnklogout_Click" style="color: #000000" Text="LogOut"></asp:LinkButton>
-                <hr />
+             </tr>
+        
+            <tr>
+                <td class="auto-style4">
+                 
+                    Source:
+                                 
+                </td>
+                 <td>
+                 
+                     <asp:TextBox ID="txtsource" runat="server" Width="332px"></asp:TextBox>
+                 
+                </td>
+            </tr>
+             <tr>
+                <td class="auto-style4">
+                 
+                    Destination:
+
+                </td>
+                 <td>
+                 
+                     <asp:TextBox ID="txtdestination" runat="server" Width="330px"></asp:TextBox>
+                 
+                </td>
+            </tr>
+              <tr>
+                <td class="auto-style5">
+                 
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="submit" Height="42px" Width="147px" />
+                
+                </td>
+                 <td class="auto-style6">
+                 
+                <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="search Cabs" Height="38px" Width="155px" />
+                 
+                </td>
+            </tr>
+            <tr>
+            <td class="auto-style4" >
+                <asp:LinkButton ID="lnklogout" runat="server" CssClass="auto-style3" OnClick="lnklogout_Click" style="color: #000000; text-decoration: none;" Text="LogOut"></asp:LinkButton>
             </td>
         </tr>
-        <tr>
-            <td colspan="2">
-                <div id="dvDistance" runat="server">
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div id="dvMap" runat="server" class="auto-style1">
-                </div>
-            </td>
-            <td>
-                <div id="dvPanel" runat="server" style="width: 500px; height: 500px">
-                </div>
-            </td>
-        </tr>
+        
     </table>
+     <br />
+    
+    <a align="center" href="Homepage.aspx"><< Back to Home </a>
+    <br />
+    <br />
+    <h1> Location Search</h1>
+     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+         <Columns>
+             <asp:BoundField DataField="Locations" HeaderText="Source" />
+             <asp:BoundField DataField="Destination" HeaderText="Destination" />
+             <asp:CommandField ButtonType="Button" ShowEditButton="True">
+             <ControlStyle BackColor="#00CC00" ForeColor="White" />
+             </asp:CommandField>
+             <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
+             <ControlStyle BackColor="Red" ForeColor="White" />
+             </asp:CommandField>
+         </Columns>
+     </asp:GridView>
+     <br />
+    <div>
+    <br />
+    <br />
+   
+        </div>
 </asp:Content>
+

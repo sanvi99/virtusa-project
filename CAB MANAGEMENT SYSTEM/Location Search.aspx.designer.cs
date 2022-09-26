@@ -15,22 +15,31 @@ namespace CAB_MANAGEMENT_SYSTEM
     {
 
         /// <summary>
-        /// txtSource control.
+        /// txtsource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtSource;
+        protected global::System.Web.UI.WebControls.TextBox txtsource;
 
         /// <summary>
-        /// txtDestination control.
+        /// txtdestination control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtDestination;
+        protected global::System.Web.UI.WebControls.TextBox txtdestination;
+
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
         /// btnSearch control.
@@ -51,30 +60,12 @@ namespace CAB_MANAGEMENT_SYSTEM
         protected global::System.Web.UI.WebControls.LinkButton lnklogout;
 
         /// <summary>
-        /// dvDistance control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvDistance;
-
-        /// <summary>
-        /// dvMap control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvMap;
-
-        /// <summary>
-        /// dvPanel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl dvPanel;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

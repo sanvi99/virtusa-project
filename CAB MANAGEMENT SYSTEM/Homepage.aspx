@@ -6,11 +6,16 @@
             width: 1462px;
             height: 401px;
         }
+        .auto-style6 {
+            width: 1782px;
+            height: 391px;
+            
+        }
     </style>
   
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <section>
-        <img  src="imgs/1.jpg"  align="center" class="auto-style3" />
+        <img  src="imgs/1.jpg"  align="center" class="auto-style6" />
     </section>
 </asp:Content>

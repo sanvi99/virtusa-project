@@ -2,20 +2,28 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div align="center" class="auto-style3">
-        <table class="auto-style1">
+    
+    <div align="center" class="auto-style7">
+        <table>
             <tr>
                 <td colspan="2">
                     <h1>Driver Details </h1>
                 </td>
             </tr>
-           
+              <tr>
+                <td>
+                    <asp:Label ID="Label1" runat="server" Text="Driver Id"></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtDid" runat="server" ></asp:TextBox>
+                </td>
+            </tr>
             <tr>
                 <td>
                     <asp:Label ID="Label2" runat="server" Text="Driver Name"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtDname" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtDname" runat="server" CssClass="auto-style6"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -58,9 +66,6 @@
                     <asp:TextBox ID="txtLocation" runat="server"></asp:TextBox>
                 </td>
             </tr>
-            <caption>
-                <br />
-            </caption>
             <tr>
                 <td>
                     <asp:Button ID="Button2" runat="server" Height="30px" OnClick="Button2_Click" Text="Submit" Width="78px" />
@@ -71,7 +76,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:LinkButton ID="lnklogout" runat="server" Font-Size="X-Large" ForeColor="Black" OnClick="lnklogout_Click" style="z-index: 1; left: 843px; top: 232px; position: " Text="LogOut"></asp:LinkButton>
+                    <asp:LinkButton ID="lnklogout" runat="server"   OnClick="lnklogout_Click"  Text="LogOut"></asp:LinkButton>
                 </td>
             </tr>
         </table>
@@ -80,31 +85,25 @@
     <a align="center" href="Homepage.aspx"><< Back to Home </a><br />
     </div>
     <br />
-    <br />
     <div class="row">
         <h4>Driver Details</h4>
         <asp:GridView Class="table table-striped table-bordered"
-            Id="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            Id="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating"   >
             <Columns>
-                <asp:BoundField DataField="Driver_id" HeaderText="Driver Id" />
+                <asp:BoundField DataField="Driver_id" HeaderText="Driver Id"  />
                 <asp:BoundField DataField="Driver_name" HeaderText="Driver name" />
                 <asp:BoundField DataField="Driver_phone" HeaderText="Driver Phone" />
                 <asp:BoundField DataField="Driver_email" HeaderText="Driver Email" />
                 <asp:BoundField DataField="Cabmodel" HeaderText="Cab Model" />
                 <asp:BoundField DataField="Fare" HeaderText="Fare" />
-                <asp:BoundField DataField="Location" HeaderText="Location" />
-                <asp:CommandField ButtonType="Button" CancelText="" DeleteText="" ShowEditButton="True" />
-                <asp:BoundField />
+                <asp:BoundField DataField="Locations" HeaderText="Location" />
+                <asp:CommandField ButtonType="Button" ShowEditButton="True" >
+                <ControlStyle BackColor="#009900" ForeColor="White" />
+                </asp:CommandField>
+                <asp:CommandField ButtonType="Button" ShowDeleteButton="True">
+                <ControlStyle BackColor="Red" ForeColor="White" />
+                </asp:CommandField>
             </Columns>
-            <FooterStyle BackColor="#CCCCCC" />
-            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
-            <RowStyle BackColor="White" />
-            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-            <SortedAscendingHeaderStyle BackColor="#808080" />
-            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-            <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
     </div>
 </asp:Content>

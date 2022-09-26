@@ -129,8 +129,10 @@
     <Content Include="imgs\6.jpg" />
     <Content Include="imgs\istock.jpg" />
     <Content Include="imgs\onthego.jpg" />
+    <Content Include="imgs\tick.jfif" />
     <Content Include="Location Search.aspx" />
-    <Content Include="WebForm1.aspx" />
+    <Content Include="About Us.aspx" />
+    <Content Include="Booked Details.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="User Registration.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -187,6 +189,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="GridVeiw1\EditIndex.cs" />
     <Compile Include="Homepage.aspx.cs">
       <DependentUpon>Homepage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -230,12 +233,19 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="About Us.aspx.cs">
+      <DependentUpon>About Us.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
+    <Compile Include="About Us.aspx.designer.cs">
+      <DependentUpon>About Us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Booked Details.aspx.cs">
+      <DependentUpon>Booked Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Booked Details.aspx.designer.cs">
+      <DependentUpon>Booked Details.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

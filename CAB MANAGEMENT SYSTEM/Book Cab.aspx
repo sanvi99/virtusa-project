@@ -1,12 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Book Cab.aspx.cs" Inherits="CAB_MANAGEMENT_SYSTEM.Book_Cab" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
-        .auto-style1 {
-            height: 363px;
-        }
-        .auto-style2 {
-            height: 363px;
-            width: 102%;
+        .auto-style3 {
+            height: 355px;
+            width: 1509px;
         }
     </style>
 </asp:Content>
@@ -15,34 +12,28 @@
        
         <div align="Center">
 
-             <img src="imgs/onthego.jpg" class="auto-style2" />     
+             <img src="imgs/onthego.jpg" class="auto-style3" />     
              
         </div>
-        <br />
-    <br />
-
     <div>
         
       <div>
           <h4>Cab Booking Details</h4>
-           <asp:GridView ID="GridView1"   AutoGenerateColumns="false"    runat="server" 
-               DataKeyNames="CabID,DriverId,DriverEmail,DriverPhno,fare" OnRowCommand="GridView1_RowCommand">
-               <Columns>
-                   <asp:BoundField HeaderText="CabModel" DataField="CabModel" />
-                   <asp:BoundField HeaderText="Fare PER KM" DataField="fare" />
-                   <asp:BoundField HeaderText="Locaion" DataField="Locaion" />
-                   <asp:BoundField HeaderText="DriverName" DataField="DriverName" />                 
-                   <asp:BoundField HeaderText="DriverPhno" DataField="DriverPhno" />
-                   <asp:TemplateField>
-                       <ItemTemplate>
-                           <asp:LinkButton ID="LinkButton1" runat="server" CommandName="SelectCab">Select</asp:LinkButton>
-                       </ItemTemplate>
-                   </asp:TemplateField>
-                   <asp:BoundField Visible="false" DataField="DriverEmail" />
-                                  
-
-               </Columns>
-           </asp:GridView>
+         
+          <br />
+          <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView3_SelectedIndexChanged">
+              <Columns>
+                  <asp:BoundField DataField="Driver_id" HeaderText="Driver Id" />
+                  <asp:BoundField DataField="Driver_name" HeaderText="Driver Name" />
+                  <asp:BoundField DataField="Driver_phone" HeaderText="Driver Phone " />
+                  <asp:BoundField DataField="cabmodel" HeaderText="Cab Model" />
+                  <asp:BoundField DataField="Fare" HeaderText="Fare" />
+                  <asp:BoundField DataField="Locations" HeaderText="Location" />
+                  <asp:CommandField ButtonType="Button" ShowSelectButton="True">
+                  <ControlStyle BackColor="Blue" ForeColor="White" />
+                  </asp:CommandField>
+              </Columns>
+          </asp:GridView>
        </div>
         <div>
             <asp:Label ID="lblFare"  runat="server"></asp:Label>

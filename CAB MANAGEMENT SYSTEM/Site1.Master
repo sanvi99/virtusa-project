@@ -31,11 +31,23 @@
    
     <style type="text/css">
         .auto-style1 {
-            width: 509px;
+            width: 1793px;
         }
         .auto-style2 {
-            width: 509px;
-            height: 339px;
+            height: 39px;
+          
+        }
+        .auto-style3 {
+            height: 98px;
+            
+        }
+        .auto-style4 {
+            height: 24px;
+        }
+        .auto-style5 {
+            height: 37px;
+           
+            width: 140px;
         }
     </style>
    
@@ -45,9 +57,8 @@
 
 <body >
     <form id="form1" runat="server">
-        
-         <div>
-            <nav class="navbar navbar-expand-1g navbar-light"> 
+       <div>
+            <nav class="navbar navbar-expand-1g navbar-light" background-colour="Yellow"> 
                 <a class="navbar-brand" href="#"> 
                    <img src="imgs/istock.jpg" width="30" height="30" />
                     Cab Management System
@@ -57,6 +68,8 @@
          <button  class="navbar-toggler" type="button" data-toggle="collapse" data-targets="#navbarSupportedContent" 
              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
+             <span class="navbar-toggler-icon"></span>
+             <span class="navbar-toggler-icon"></span>
          </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent"> 
@@ -65,11 +78,8 @@
                             <a class="nav-link" href="homepage.aspx">Home</a> 
                         </li>
                         <li class="nav-item active"> 
-                            <a class="nav-link" href="#">About Us</a> 
+                            <a class="nav-link" href="About%20Us.aspx">About Us</a> 
                         </li> 
-                        <li class="nav-item active"> 
-                            <a class="nav-link" href="#">Terms</a> 
-                        </li>
 
                     </ul>
 
@@ -90,6 +100,7 @@
              </div>
           </nav>
         </div>
+         
          <!-- Main Content Placeholder -->
 
         <div >

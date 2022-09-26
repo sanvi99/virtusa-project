@@ -29,10 +29,10 @@ namespace CAB_MANAGEMENT_SYSTEM
             SqlCommand cmd = new SqlCommand(check, con);
             con.Open();
             int temp = Convert.ToInt32(cmd.ExecuteScalar().ToString());
-            con.Close();
+
             if (temp == 1)
             {
-                Response.Redirect("WebForm1.aspx");
+                Response.Redirect("Driver Details.aspx");
             }
             else
             {

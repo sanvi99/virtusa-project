@@ -11,26 +11,8 @@ namespace CAB_MANAGEMENT_SYSTEM
 {
 
 
-    public partial class Driver_Details
+    public partial class WebForm2
     {
-
-        /// <summary>
-        /// Label1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-
-        /// <summary>
-        /// txtDid control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDid;
 
         /// <summary>
         /// Label2 control.
@@ -42,13 +24,13 @@ namespace CAB_MANAGEMENT_SYSTEM
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// txtDname control.
+        /// txtDid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDname;
+        protected global::System.Web.UI.WebControls.TextBox txtDid;
 
         /// <summary>
         /// Label4 control.
@@ -60,13 +42,13 @@ namespace CAB_MANAGEMENT_SYSTEM
         protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
-        /// txtDpno control.
+        /// txtDname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDpno;
+        protected global::System.Web.UI.WebControls.TextBox txtDname;
 
         /// <summary>
         /// Label5 control.
@@ -78,13 +60,13 @@ namespace CAB_MANAGEMENT_SYSTEM
         protected global::System.Web.UI.WebControls.Label Label5;
 
         /// <summary>
-        /// txtDemail control.
+        /// txtDpno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDemail;
+        protected global::System.Web.UI.WebControls.TextBox txtDpno;
 
         /// <summary>
         /// Label7 control.
@@ -141,39 +123,12 @@ namespace CAB_MANAGEMENT_SYSTEM
         protected global::System.Web.UI.WebControls.TextBox txtLocation;
 
         /// <summary>
-        /// Button2 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button2;
-
-        /// <summary>
-        /// Button3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-
-        /// <summary>
-        /// lnklogout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnklogout;
-
-        /// <summary>
-        /// GridView1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label Label1;
     }
 }
