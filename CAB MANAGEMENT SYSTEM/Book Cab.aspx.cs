@@ -22,7 +22,7 @@ namespace CAB_MANAGEMENT_SYSTEM
             if (!IsPostBack)
             {
                 SqlConnection con = new SqlConnection(constring);
-                string query = "select c.Driver_id,c.Driver_name,c.Driver_phone,c.Cabmodel,c.Fare,c.Locations  from cabdetails c join locationdetails l on c.Locations = l.Locations";
+                string query = "select c.Driver_id,c.Driver_name,c.Driver_phone,c.Cabmodel,c.Fare,c.Locations,l.Destination from cabdetails c join locationdetails l on c.Locations = l.Locations";
                 SqlCommand cmd = new SqlCommand(query, con);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();

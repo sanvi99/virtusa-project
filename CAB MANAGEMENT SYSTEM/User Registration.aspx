@@ -2,9 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <h2 align="center">User Registration </h2>
+    
     <div align="center">
-        <table>
+        <table class="auto-style1">
+            <tr>
+                <td colspan="2">
+                    <h1 align="center">User Registration</h1> 
+                </td>
+             </tr>
             <tr>
                 <td>
                     <asp:Label ID="Label1" runat="server" Text="User Name"></asp:Label>

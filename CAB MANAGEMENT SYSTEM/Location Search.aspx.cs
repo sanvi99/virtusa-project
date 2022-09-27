@@ -77,22 +77,15 @@ namespace CAB_MANAGEMENT_SYSTEM
             Response.Redirect("User Login.aspx");
         }
 
-        protected void GridView2_RowEditing(object sender, GridViewEditEventArgs e)
+        protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-
-            GridView1.EditIndex = e.NewEditIndex;
-            GVlocation();
-        }
-
-        protected void GridView2_RowUpdating(object sender, GridViewUpdateEventArgs e)
-        {
-            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
             string source = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
-            string destination = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
+            string destination = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
             using (SqlConnection con = new SqlConnection(constring))
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("Update [dbo].[locationdetails] set  Source='" + source + "',Destination='" + destination + "'", con);
+                SqlCommand cmd = new SqlCommand("Update [dbo].[locationdetails] set L_id='"+id+"', Locations='" + source + "',Destination='" + destination + "'", con);
                 int t = cmd.ExecuteNonQuery();
                 if (t > 0)
                 {
@@ -103,13 +96,13 @@ namespace CAB_MANAGEMENT_SYSTEM
             }
         }
 
-        protected void GridView2_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
-            GridView1.EditIndex = -1;
+            GridView1.EditIndex = e.NewEditIndex;
             GVlocation();
         }
 
-        protected void GridView2_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
             using (SqlConnection con = new SqlConnection(constring))
@@ -127,8 +120,10 @@ namespace CAB_MANAGEMENT_SYSTEM
             }
         }
 
-
-
-
+        protected void GridView1_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            GridView1.EditIndex = -1;
+            GVlocation();
+        }
     }
 }

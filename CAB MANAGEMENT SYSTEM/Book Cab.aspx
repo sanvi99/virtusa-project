@@ -29,6 +29,7 @@
                   <asp:BoundField DataField="cabmodel" HeaderText="Cab Model" />
                   <asp:BoundField DataField="Fare" HeaderText="Fare" />
                   <asp:BoundField DataField="Locations" HeaderText="Location" />
+                  <asp:BoundField DataField="Destination" HeaderText="Destination" />
                   <asp:CommandField ButtonType="Button" ShowSelectButton="True">
                   <ControlStyle BackColor="Blue" ForeColor="White" />
                   </asp:CommandField>

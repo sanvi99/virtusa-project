@@ -99,7 +99,7 @@ namespace CAB_MANAGEMENT_SYSTEM
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
             string name = ((TextBox)GridView1.Rows[e.RowIndex].Cells[1].Controls[0]).Text;
             string phone = ((TextBox)GridView1.Rows[e.RowIndex].Cells[2].Controls[0]).Text;
             string email = ((TextBox)GridView1.Rows[e.RowIndex].Cells[3].Controls[0]).Text;
@@ -134,7 +134,7 @@ namespace CAB_MANAGEMENT_SYSTEM
 
         protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value.ToString());
+            int id = Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
             using (SqlConnection con = new SqlConnection(constring))
             {
                 con.Open();

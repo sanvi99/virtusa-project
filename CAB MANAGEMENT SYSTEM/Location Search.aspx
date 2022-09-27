@@ -15,10 +15,18 @@
         .auto-style6 {
             height: 53px;
         }
+        .auto-style7 {
+            width: 334px;
+        }
+        .auto-style8 {
+            height: 53px;
+            width: 334px;
+        }
     </style>
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <table align="center" class="auto-style3" >
+    </br>
+     <table align="center" class="auto-style1" >
              <tr>
                 <td colspan="2">
                     <h1 align="center">  Location Search</h1> 
@@ -31,7 +39,7 @@
                     Source:
                                  
                 </td>
-                 <td>
+                 <td class="auto-style7">
                  
                      <asp:TextBox ID="txtsource" runat="server" Width="332px"></asp:TextBox>
                  
@@ -43,7 +51,7 @@
                     Destination:
 
                 </td>
-                 <td>
+                 <td class="auto-style7">
                  
                      <asp:TextBox ID="txtdestination" runat="server" Width="330px"></asp:TextBox>
                  
@@ -55,7 +63,7 @@
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="submit" Height="42px" Width="147px" />
                 
                 </td>
-                 <td class="auto-style6">
+                 <td class="auto-style8">
                  
                 <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="search Cabs" Height="38px" Width="155px" />
                  
@@ -74,7 +82,7 @@
     <br />
     <br />
     <h1> Location Search</h1>
-     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
+     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="L_id" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating">
          <Columns>
              <asp:BoundField DataField="Locations" HeaderText="Source" />
              <asp:BoundField DataField="Destination" HeaderText="Destination" />

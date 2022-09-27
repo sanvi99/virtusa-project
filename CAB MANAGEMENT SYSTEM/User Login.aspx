@@ -4,11 +4,19 @@
         .auto-style3 {
             height: 43px;
         }
+        .auto-style7 {
+            width: 155px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <h2 align="center">User Login</h2>
-    <table align="center">
+     
+    <table  class="auto-style1"   align="center">
+        <tr>
+                <td colspan="2">
+                    <h1 align="center">  User Login</h1> 
+                </td>
+             </tr>
         <tr>
             <td>
                 <asp:Label ID="Label1" runat="server" Text="User Name"></asp:Label>
@@ -27,8 +35,8 @@
         </tr>
         <tr >
             <td class="auto-style3">
-                </asp:Button>
-                <asp:Button ID="Button1" runat="server" Height="29px" OnClick="Button1_Click1" Text="Login" Width="79px" />
+                
+                <asp:Button ID="Button1" runat="server" Height="29px" OnClick="Button1_Click1" Text="Login" Width="79px" ></asp:Button>
             </td>
             <td class="auto-style3">
                 <asp:LinkButton ID="LinkButton2" runat="server" PostBackUrl="User Registration.aspx" OnClick="LinkButton2_Click">User Registration</asp:LinkButton>

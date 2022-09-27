@@ -2,13 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <div class="row">
+     <div class="row" >
         <div class="col-md-4">
             <h2>Convenience</h2>
-            <p align="left">
-            Book within seconds and get instant confirmations. 
-            Easy online payments or cash on delivery. 
-            Booking car rentals will never be a headache again!
+            <p>
+            Book within seconds and get instant confirmations. Easy online payments or cash on delivery. Booking car rentals will never be a headache again!
             </p>
           </div>
         <div class="col-md-4">

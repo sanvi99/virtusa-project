@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     
     <div align="center" class="auto-style7">
-        <table>
+        <table class="auto-style1">
             <tr>
                 <td colspan="2">
                     <h1>Driver Details </h1>
@@ -23,7 +23,7 @@
                     <asp:Label ID="Label2" runat="server" Text="Driver Name"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtDname" runat="server" CssClass="auto-style6"></asp:TextBox>
+                    <asp:TextBox ID="txtDname" runat="server" Width="159px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -88,9 +88,9 @@
     <div class="row">
         <h4>Driver Details</h4>
         <asp:GridView Class="table table-striped table-bordered"
-            Id="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating"   >
+            Id="GridView1" runat="server" AutoGenerateColumns="False" OnRowCancelingEdit="GridView1_RowCancelingEdit" OnRowDeleting="GridView1_RowDeleting" OnRowEditing="GridView1_RowEditing" OnRowUpdating="GridView1_RowUpdating" DataKeyNames="Driver_id"   >
             <Columns>
-                <asp:BoundField DataField="Driver_id" HeaderText="Driver Id"  />
+                <asp:BoundField DataField="Driver_id" HeaderText="Driver Id" ReadOnly="True"  />
                 <asp:BoundField DataField="Driver_name" HeaderText="Driver name" />
                 <asp:BoundField DataField="Driver_phone" HeaderText="Driver Phone" />
                 <asp:BoundField DataField="Driver_email" HeaderText="Driver Email" />
